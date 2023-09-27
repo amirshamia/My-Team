@@ -1,0 +1,29 @@
+.contact-us-container {
+    height: 200px;
+    background-color: $clr3bg;
+    position: relative;
+    @include flexcenter();
+
+    img {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+
+    div {
+        color: $clr4;
+        width: 917px;
+        display: flex;
+        justify-content: space-between;
+
+        span {
+            font-size: 48px;
+            line-height: 48px;
+        }
+        button{
+            background-color: transparent;
+            border-radius: 2em;
+            width: 153px;
+        }
+    }
+}

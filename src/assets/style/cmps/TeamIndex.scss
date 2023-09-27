@@ -1,0 +1,70 @@
+.team-container {
+    height: 745px;
+    background-color: $clr1bg;
+    display: grid;
+    position: relative;
+
+
+    .img1 {
+        position: absolute;
+     
+    }
+    .img2 {
+        position: absolute;
+     bottom: 0;
+     right: 0;
+    }
+
+    main {
+        @include flexcenter();
+        flex-direction: column;
+
+    }
+
+    .title {
+        font-size: 48px;
+        line-height: 48px;
+        text-align: center;
+        margin-bottom: 92px;
+        span{
+            color: $clr3;
+        }
+    }
+
+    .cards-container {
+        @include flexcenter();
+        gap: 30px;
+
+        .member {
+            width: 350px;
+            @include flexcenter();
+            flex-direction: column;
+
+            p {
+                line-height: 20px;
+                text-align: center;
+                position: relative;
+
+                .quotes {
+                    position: absolute;
+                    right: 42%;
+                    bottom: 62px;
+                    opacity: 0.2;
+                }
+            }
+
+            div {
+                color: $clr3;
+              
+            }
+
+            img {
+                margin-top: 40px;
+                border-radius: 50%;
+                width: 62px;
+                height: 62px;
+            }
+
+        }
+    }
+}

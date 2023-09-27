@@ -1,0 +1,15 @@
+.main-layout {
+  margin: 0 auto;
+  display: grid;
+  justify-content: center;
+  width: 1440px;
+  // background-color: $clr1bg;
+}
+
+
+footer {
+  background-color: $clr1;
+  color: $clr1bg;
+  padding: 1em;
+  text-align: center;
+}

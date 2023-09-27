@@ -1,0 +1,65 @@
+/* Media queries Breakpoint mixins */
+
+@mixin for-mobile-layout {
+  @media (max-width: $break-narrow) {
+    @content;
+  }
+}
+
+@mixin for-narrow-layout {
+  @media (min-width: $break-narrow) {
+    @content;
+  }
+}
+
+@mixin for-normal-layout {
+  @media (min-width: $break-normal) {
+    @content;
+  }
+}
+
+@mixin for-wide-layout {
+  @media (min-width: $break-wide) {
+    @content;
+  }
+}
+
+@mixin layoutGTC($max) {
+  grid-template-columns:
+    minmax($layoutPadding, 1fr) minmax(auto, $max) minmax($layoutPadding, 1fr);
+}
+
+@mixin flexcenter() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+// Type
+
+@mixin type($type: bold) {
+
+  // type options: 
+  // 1.bold 
+  // 2.boldCondensed 
+  // 3.condensed
+  @if $type ==bold {
+    font-variation-settings: "wght" 430;
+  }
+
+  @else if $type ==boldCondensed {
+    font-variation-settings: "wght" 430, "wdth" 80;
+    letter-spacing: em(6.72px);
+  }
+
+  @else if $type ==condensed {
+    font-variation-settings: "wdth" 80;
+    letter-spacing: em(6.72px);
+  }
+
+  @else if $type ==light {
+    font-variation-settings: "wght" 200;
+  }
+}
